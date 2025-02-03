@@ -257,7 +257,7 @@ const ContactModal = ({ open, onClose, contactId, initialValues, onSave }) => {
 												))}
 											<div className={classes.extraAttr}>
 												<Button
-													style={{ flex: 1, marginTop: 8 }}
+													style={{ flex: 1, marginTop: 8 , borderColor: "#e22e00", color: "#e22e00" }}
 													variant="outlined"
 													color="secondary"
 													onClick={() => push({ name: "", value: "" })}
@@ -274,6 +274,7 @@ const ContactModal = ({ open, onClose, contactId, initialValues, onSave }) => {
 									onClick={handleClose}
 									color="secondary"
 									disabled={isSubmitting}
+									style={{ fontWeight: "bold", borderColor: "#e22e00", color: "#e22e00" }}
 									variant="outlined"
 								>
 									{i18n.t("contactModal.buttons.cancel")}

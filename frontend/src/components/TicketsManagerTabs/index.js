@@ -343,6 +343,7 @@ const TicketsManagerTabs = () => {
                 className={classes.badge}
                 badgeContent={pendingCount}
                 color="secondary"
+                style={{ borderColor: "#e22e00", color: "#e22e00" }}
               >
                 {i18n.t("ticketsList.pendingHeader")}
               </Badge>

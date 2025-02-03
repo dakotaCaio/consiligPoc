@@ -204,6 +204,7 @@ const Invoices = () => {
                         size="small"
                         variant="outlined"
                         color="secondary"
+                        style={{ borderColor: "#e22e00", color: "#e22e00" }}
                         onClick={() => handleOpenContactModal(invoices)}
                       >
                         PAGAR

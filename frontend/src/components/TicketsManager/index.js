@@ -191,7 +191,7 @@ const TicketsManager = () => {
                 badgeContent={openCount}
                 overlap="rectangular"
                 color="secondary"
-                style={{ fontWeight: "bold"}}
+                style={{ borderColor: "#e22e00", color: "#e22e00", fontWeight: "bold" }}
               >
                 {i18n.t("tickets.tabs.open.title")}
               </Badge>
@@ -207,7 +207,7 @@ const TicketsManager = () => {
                 badgeContent={pendingCount}
                 overlap="rectangular"
                 color="secondary"
-                style={{ fontWeight: "bold"}}
+                style={{ borderColor: "#e22e00", color: "#e22e00", fontWeight: "bold" }}
               >
                 {i18n.t("ticketsList.pendingHeader")}
               </Badge>

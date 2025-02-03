@@ -320,7 +320,7 @@ export function PlanManagerForm(props) {
                         </Grid>
                         {record.id !== undefined ? (
                             <Grid sm={3} md={2} item>
-                                <ButtonWithSpinner className={classes.fullWidth} loading={loading} onClick={() => onDelete(record)} variant="contained" color="secondary">
+                                <ButtonWithSpinner className={classes.fullWidth} loading={loading} onClick={() => onDelete(record)} variant="contained" color="secondary" style={{ borderColor: "#e22e00", color: "#e22e00" }}>
                                     {i18n.t("plans.form.delete")}
                                 </ButtonWithSpinner>
                             </Grid>

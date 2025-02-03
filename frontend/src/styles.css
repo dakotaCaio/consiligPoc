@@ -294,7 +294,7 @@
     }
     #dashboard-content tr,
     #dashboard-content .MuiTableContainer-root {
-        background: linear-gradient(to right, #e73d6a, #1c2027);
+        background: linear-gradient(to right, #5cb2ce, #1c2027);
     }
     #dashboard-content tr .MuiTableCell-root,
     #dashboard-content .MuiTableContainer-root h2 {
@@ -379,9 +379,9 @@
         left: 1rem;
     }
     .sideMenu .MuiListItem-button:hover svg {
-        fill: #a70c35;
-        stroke: #a70c35;
-        color: #a70c35
+        fill: #5cb2ce;
+        stroke: #5cb2ce;
+        color: #5cb2ce
     }
     .whatsapp + li .MuiListItem-button:hover svg{
         fill: #ffff !important
@@ -389,7 +389,7 @@
     #root>div:first-child>div:first-child>div ul .MuiListItem-button:hover::before {
         content: "";
         position: absolute;
-        background: #a70c35;
+        background: #5cb2ce;
         height: 100%;
         width: 6px;
         left: -4px;
@@ -437,7 +437,7 @@
         box-shadow: 0 0 12px 1px #ffffffc7;
     }
     div#root header>div button:hover {
-        background: #a70c35;
+        background: #5cb2ce;
         color: #fff;
     }
     div#root header>div button:hover svg {
@@ -448,7 +448,7 @@
     /*CHAT*/
     #simple-tabpanel-open [aria-selected=false]:hover {
         background: #fafafa;
-        color: #a70c35 !important;
+        color: #5cb2ce !important;
     }
     button.MuiTab-labelIcon:first-child[aria-selected="true"] span:first-child,
     button.MuiTab-labelIcon:nth-child(2)[aria-selected="true"] span:first-child,
@@ -541,7 +541,7 @@
         color: rgb(255 255 255 / 87%)
     }
     .MuiListItem-button:hover{
-        background-color: rgb(147 12 15);
+        background-color: rgb(10, 139, 156);
         border-top-right-radius: 25px;
         border-bottom-right-radius: 25px;
     }
@@ -635,7 +635,7 @@
     }
     #root>div:first-child>div:first-child>div ul .MuiListItem-button:hover { 
         background-color: transparent;
-        color: #a70c35;
+        color: #5cb2ce;
     }
     .MuiListItemSecondaryAction-root + span{
         background-color: none !important;
@@ -898,7 +898,7 @@
         fill: #fff;
     }
     .relatoriosbtn button{
-        background-color: #7f0727;
+        background-color: #00b6d3;
         border-radius: 18px;
         font-weight: 600;
     }
@@ -1039,8 +1039,8 @@ body.light [aria-label="Limpar"] svg{
     fill: #00000090
 }
 body.light #simple-tabpanel-open [aria-selected=false]:hover{
-    color:#a70c35 !important;
-    border: 1px solid #a70c35 !important
+    color:#5cb2ce !important;
+    border: 1px solid #5cb2ce !important
 }
 body.light .MuiCardHeader-content .MuiTypography-noWrap{
     color: #00000090 !important
@@ -1085,11 +1085,11 @@ body.light .MuiCardHeader-content .MuiTypography-noWrap{
 .tabulacao:hover svg,
 .users:hover svg{
     fill: #ffffff !important;
-    stroke: #a70c35 !important;
-    color: #a70c35;
+    stroke: #5cb2ce !important;
+    color: #5cb2ce;
 }
 .sideMenu > li:first-child a:hover svg{
-    color: #a70c35 !important;
+    color: #5cb2ce !important;
 }
 
 .MuiListItemText-multiline{
@@ -1107,7 +1107,7 @@ div#root header>div.MuiToolbar-dense h2 + button{
 }
 .MuiButton-outlinedPrimary[type="button"]:hover,
 div#root header>div.MuiToolbar-dense h2 + button:hover{
-    background-color: #a70c35 !important;
+    background-color: #5cb2ce !important;
 }
 
 div#root header > div.MuiToolbar-dense{
@@ -1158,7 +1158,7 @@ header h2 {
 
 }
 .templateHeader button:hover{
-    background-color: #a70c35 ;
+    background-color: #5cb2ce ;
 }
 
 .textField+ div .MuiOutlinedInput-root{
@@ -1178,7 +1178,7 @@ main .template::before {
     content: "";
     width: 6px;
     height: 51px;
-    background-color: #a70c35;
+    background-color: #5cb2ce;
     position: absolute;
     left: 0;
 }

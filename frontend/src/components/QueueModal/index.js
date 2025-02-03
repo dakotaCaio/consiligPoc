@@ -395,6 +395,7 @@ const QueueModal = ({ open, onClose, queueId }) => {
                         <IconButton
                           onClick={() => setConfirmationOpen(true)}
                           color="secondary"
+                          style={{ borderColor: "#e22e00", color: "#e22e00" }}
                         >
                           <DeleteOutline />
                         </IconButton>
@@ -406,10 +407,10 @@ const QueueModal = ({ open, onClose, queueId }) => {
                   {!attachment && !queue.mediaPath && queueEditable && (
                     <Button
                       color="secondary"
+                      style={{ borderColor: "#e22e00", color: "#e22e00", fontWeight: "bold" }}
                       onClick={() => attachmentFile.current.click()}
                       disabled={isSubmitting}
                       variant="outlined"
-                      style={{ fontWeight: "bold"}}
                     >
                       {i18n.t("queueModal.buttons.attach")}
                     </Button>
@@ -417,9 +418,9 @@ const QueueModal = ({ open, onClose, queueId }) => {
                     <Button
                       onClick={handleClose}
                       color="secondary"
+                      style={{ borderColor: "#e22e00", color: "#e22e00", fontWeight: "bold" }}
                       disabled={isSubmitting}
                       variant="outlined"
-                      style={{ fontWeight: "bold"}}
                     >
                       {i18n.t("queueModal.buttons.cancel")}
                     </Button>

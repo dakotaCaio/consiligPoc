@@ -147,6 +147,7 @@ const ContactListModal = ({ open, onClose, contactListId }) => {
                 <Button
                   onClick={handleClose}
                   color="secondary"
+                  style={{ fontWeight: "bold", borderColor: "#e22e00", color: "#e22e00" }}
                   disabled={isSubmitting}
                   variant="outlined"
                 >

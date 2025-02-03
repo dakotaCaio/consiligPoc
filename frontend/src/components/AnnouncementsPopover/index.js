@@ -251,6 +251,7 @@ export default function AnnouncementsPopover() {
       >
         <Badge
           color="secondary"
+          style={{ borderColor: "#e22e00", color: "#e22e00" }}
           variant="dot"
           invisible={invisible || announcements.length < 1}
         >

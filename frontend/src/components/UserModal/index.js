@@ -358,9 +358,9 @@ const UserModal = ({ open, onClose, userId }) => {
 								<Button
 									onClick={handleClose}
 									color="secondary"
+									style={{ borderColor: "#e22e00", color: "#e22e00", fontWeight: "bold" }}
 									disabled={isSubmitting}
 									variant="outlined"
-									style={{ fontWeight: "bold"}}
 								>
 									{i18n.t("userModal.buttons.cancel")}
 								</Button>

@@ -229,6 +229,7 @@ const ModalUsers = ({ open, onClose, userId, companyId }) => {
                 <Button
                   onClick={handleClose}
                   color="secondary"
+                  style={{ borderColor: "#e22e00", color: "#e22e00" }}
                   disabled={isSubmitting}
                   variant="outlined"
                 >

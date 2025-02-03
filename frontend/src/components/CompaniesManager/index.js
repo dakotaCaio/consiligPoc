@@ -347,19 +347,19 @@ export function CompanyForm(props) {
                     <>
                       <Grid xs={6} md={1} item>
                         <ButtonWithSpinner
-                          style={{ marginTop: 7 }}
                           className={classes.fullWidth}
                           loading={loading}
                           onClick={() => onDelete(record)}
                           variant="contained"
                           color="secondary"
+                          style={{ marginTop: 7, borderColor: "#e22e00", color: "#e22e00" }}
                         >
                           Excluir
                         </ButtonWithSpinner>
                       </Grid>
                       <Grid xs={6} md={2} item>
                         <ButtonWithSpinner
-                          style={{ marginTop: 7 }}
+                          style={{ marginTop: 7, borderColor: "#e22e00", color: "#e22e00" }}
                           className={classes.fullWidth}
                           loading={loading}
                           onClick={() => incrementDueDate()}

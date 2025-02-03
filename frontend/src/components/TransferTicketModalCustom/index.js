@@ -272,6 +272,7 @@ const TransferTicketModalCustom = ({ modalOpen, onClose, ticketid }) => {
           <Button
             onClick={handleClose}
             color="secondary"
+            style={{ borderColor: "#e22e00", color: "#e22e00" }}
             disabled={loading}
             variant="outlined"
           >

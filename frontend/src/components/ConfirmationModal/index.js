@@ -46,6 +46,7 @@ const ConfirmationModal = ({ title, children, open, onClose, onConfirm }) => {
 						onConfirm();
 					}}
 					color="secondary"
+					style={{ borderColor: "#e22e00", color: "#e22e00" }}
 				>
 					{i18n.t("confirmationModal.buttons.confirm")}
 				</Button>

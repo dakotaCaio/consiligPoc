@@ -231,7 +231,7 @@ const NotificationsPopOver = (volume) => {
 				color="inherit"
 				style={{color:"white"}}
 			>
-				<Badge overlap="rectangular" badgeContent={notifications.length} color="secondary">
+				<Badge overlap="rectangular" badgeContent={notifications.length} color="secondary" style={{ borderColor: "#e22e00", color: "#e22e00" }}>
 					<ChatIcon />
 				</Badge>
 			</IconButton>

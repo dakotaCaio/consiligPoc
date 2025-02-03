@@ -1144,6 +1144,7 @@ const [reports, setReports] = useState([]);
               <Button
                 variant="contained"
                 color="secondary"
+								style={{ borderColor: "#e22e00", color: "#e22e00" }}
                 className="exportButton"
                 startIcon={<BsDownload />}
 								onClick={() => handleDownloadReport(report.id)}

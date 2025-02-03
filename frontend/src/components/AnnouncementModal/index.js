@@ -283,6 +283,7 @@ const AnnouncementModal = ({ open, onClose, announcementId, reload }) => {
                       <IconButton
                         onClick={() => setConfirmationOpen(true)}
                         color="secondary"
+                        style={{ borderColor: "#e22e00", color: "#e22e00" }}
                       >
                         <DeleteOutlineIcon />
                       </IconButton>
@@ -294,6 +295,7 @@ const AnnouncementModal = ({ open, onClose, announcementId, reload }) => {
                 {!attachment && !announcement.mediaPath && (
                   <Button
                     color="secondary"
+                    style={{ borderColor: "#e22e00", color: "#e22e00" }}
                     onClick={() => attachmentFile.current.click()}
                     disabled={isSubmitting}
                     variant="outlined"
@@ -304,6 +306,7 @@ const AnnouncementModal = ({ open, onClose, announcementId, reload }) => {
                 <Button
                   onClick={handleClose}
                   color="secondary"
+                  style={{ borderColor: "#e22e00", color: "#e22e00" }}
                   disabled={isSubmitting}
                   variant="outlined"
                 >

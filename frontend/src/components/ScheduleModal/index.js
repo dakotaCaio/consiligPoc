@@ -342,8 +342,9 @@ const ScheduleModal = ({ open, onClose, scheduleId, contactId, cleanContact, rel
 										<IconButton
 											onClick={() => setConfirmationOpen(true)}
 											color="secondary"
+											style={{ borderColor: "#e22e00", color: "#e22e00" }}
 										>
-											<DeleteOutline color="secondary" />
+											<DeleteOutline color="secondary" style={{ borderColor: "#e22e00", color: "#e22e00" }} />
 										</IconButton>
 									</Grid>
 								)}
@@ -352,10 +353,10 @@ const ScheduleModal = ({ open, onClose, scheduleId, contactId, cleanContact, rel
 								{!attachment && !schedule.mediaPath && (
 									<Button
 										color="secondary"
+										style={{ borderColor: "#e22e00", color: "#e22e00", fontWeight: "bold" }}
 										onClick={() => attachmentFile.current.click()}
 										disabled={isSubmitting}
 										variant="outlined"
-										style={{ fontWeight: "bold" }}
 									>
 										{i18n.t("quickMessages.buttons.attach")}
 									</Button>
@@ -365,7 +366,7 @@ const ScheduleModal = ({ open, onClose, scheduleId, contactId, cleanContact, rel
 									color="secondary"
 									disabled={isSubmitting}
 									variant="outlined"
-									style={{ fontWeight: "bold" }}
+									style={{ borderColor: "#e22e00", color: "#e22e00", fontWeight: "bold" }}
 								>
 									{i18n.t("scheduleModal.buttons.cancel")}
 								</Button>

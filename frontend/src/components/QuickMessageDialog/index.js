@@ -110,7 +110,7 @@ const QuickMessageDialog = ({ open, onClose, quickemessageId, reload }) => {
     };
 
     const handleAttachmentFile = (e) => {
-      
+
         const file = head(e.target.files);
         if (file) {
             setAttachment(file);
@@ -272,8 +272,9 @@ const QuickMessageDialog = ({ open, onClose, quickemessageId, reload }) => {
                                             <IconButton
                                                 onClick={() => setConfirmationOpen(true)}
                                                 color="secondary"
+                                                style={{ borderColor: "#e22e00", color: "#e22e00" }}
                                             >
-                                                <DeleteOutlineIcon color="secondary" />
+                                                <DeleteOutlineIcon color="secondary" style={{ borderColor: "#e22e00", color: "#e22e00" }} />
                                             </IconButton>
                                         </Grid>
                                     )}
@@ -286,27 +287,29 @@ const QuickMessageDialog = ({ open, onClose, quickemessageId, reload }) => {
                                         onClick={() => attachmentFile.current.click()}
                                         disabled={isSubmitting}
                                         variant="outlined"
-                                        style={{ fontWeight: "bold"}}
+                                        style={{ fontWeight: "bold", borderColor: "#e22e00", color: "#e22e00" }}
                                     >
                                         {i18n.t("quickMessages.buttons.attach")}
                                     </Button>
+
                                 )}
                                 <Button
                                     onClick={handleClose}
                                     color="secondary"
                                     disabled={isSubmitting}
                                     variant="outlined"
-                                    style={{ fontWeight: "bold"}}
+                                    style={{ fontWeight: "bold", borderColor: "#e22e00", color: "#e22e00" }}
                                 >
                                     {i18n.t("quickMessages.buttons.cancel")}
                                 </Button>
+
                                 <Button
                                     type="submit"
                                     color="primary"
                                     disabled={isSubmitting}
                                     variant="contained"
                                     className={classes.btnWrapper}
-                                    style={{ fontWeight: "bold"}}
+                                    style={{ fontWeight: "bold" }}
                                 >
                                     {quickemessageId
                                         ? `${i18n.t("quickMessages.buttons.edit")}`

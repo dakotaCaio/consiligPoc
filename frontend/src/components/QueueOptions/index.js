@@ -176,6 +176,7 @@ export function QueueOptionStepper({ queueId, options, updateOptions }) {
               <IconButton
                 variant="outlined"
                 color="secondary"
+                style={{ borderColor: "#e22e00", color: "#e22e00" }}
                 size="small"
                 className={classes.button}
                 onClick={() => handleDeleteOption(index)}
@@ -204,6 +205,7 @@ export function QueueOptionStepper({ queueId, options, updateOptions }) {
                         <IconButton
                           onClick={() => setConfirmationOpen(true)}
                           color="secondary"
+                          style={{ borderColor: "#e22e00", color: "#e22e00" }}
                         >
                           <DeleteOutline />
                         </IconButton>

@@ -294,6 +294,7 @@ const Connections = () => {
               size="small"
               variant="outlined"
               color="secondary"
+              style={{ borderColor: "#e22e00", color: "#e22e00" }}
               onClick={() => handleRequestNewQrCode(whatsApp.id)}
             >
               {i18n.t("connections.buttons.newQr")}
@@ -307,6 +308,7 @@ const Connections = () => {
             size="small"
             variant="outlined"
             color="secondary"
+            style={{ borderColor: "#e22e00", color: "#e22e00" }}
             onClick={() => {
               handleOpenConfirmationModal("disconnect", whatsApp.id);
             }}
@@ -331,7 +333,7 @@ const Connections = () => {
             title={i18n.t("connections.toolTips.disconnected.title")}
             content={i18n.t("connections.toolTips.disconnected.content")}
           >
-            <SignalCellularConnectedNoInternet0Bar color="secondary" />
+            <SignalCellularConnectedNoInternet0Bar color="secondary" style={{ borderColor: "#e22e00", color: "#e22e00" }} />
           </CustomToolTip>
         )}
         {whatsApp.status === "OPENING" && (
@@ -355,7 +357,7 @@ const Connections = () => {
             title={i18n.t("connections.toolTips.timeout.title")}
             content={i18n.t("connections.toolTips.timeout.content")}
           >
-            <SignalCellularConnectedNoInternet2Bar color="secondary" />
+            <SignalCellularConnectedNoInternet2Bar color="secondary" style={{ borderColor: "#e22e00", color: "#e22e00" }} />
           </CustomToolTip>
         )}
       </div>

@@ -305,7 +305,7 @@ const FilesModal = ({ open, onClose, fileListId, reload }) => {
                                                 ))}
                                             <div className={classes.extraAttrr}>
                                                 <Button
-                                                    style={{ flex: 1, marginTop: 8, fontWeight: "bold" }}
+                                                    style={{ flex: 1, marginTop: 8, fontWeight: "bold", borderColor: "#e22e00", color: "#e22e00" }}
                                                     variant="outlined"
                                                     color="secondary"
                                                     onClick={() => {push({ name: "", path: ""});
@@ -324,9 +324,9 @@ const FilesModal = ({ open, onClose, fileListId, reload }) => {
                                 <Button
                                     onClick={handleClose}
                                     color="secondary"
+                                    style={{ fontWeight: "bold", borderColor: "#e22e00", color: "#e22e00" }}
                                     disabled={isSubmitting}
                                     variant="outlined"
-                                    style={{ fontWeight: "bold"}}
                                 >
                                     {i18n.t("fileModal.buttons.cancel")}
                                 </Button>

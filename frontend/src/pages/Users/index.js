@@ -313,8 +313,8 @@ const Users = () => {
           <Button
             variant="contained"
             color="secondary"
+            style={{ borderColor: "#e22e00", color: "#e22e00", fontWeight: "bold", marginLeft: "10px" }}
             onClick={exportToCSV}
-            style={{ fontWeight: "bold", marginLeft: "10px" }}
           >
             {i18n.t("Exportar Informações de Usuários")}
           </Button>
