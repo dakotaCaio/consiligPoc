@@ -342,7 +342,6 @@
         display: none;
     }
     #root>div:first-child>div:first-child >div > div{
-        padding: 0;
         min-height: 60px;
     }
     div#root header {
@@ -486,7 +485,7 @@
         margin-bottom: 0 !important;
     }
     main .MuiGrid-root>div.MuiGrid-grid-xs-4>div.MuiPaper-rounded{
-        padding: 0px;
+        
         border-radius: inherit !important;
     }
     #simple-tabpanel-open .MuiPaper-rounded {
