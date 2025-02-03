@@ -61,18 +61,18 @@ const useStyles = makeStyles(() => ({
     },
   },
   selected: {
-    color: "#D32929",
+    color: "#00b6d3",
     backgroundColor: "transparent",
   },
   selectedItems: {
-    color: "#D32929",
-    backgroundColor: "rgba(195, 87, 87, 0.25)",
-    border: "2px solid rgba(124, 3, 3, 0.45)",
+    color: "#00b6d3",
+    backgroundColor: "rgba(0, 182, 211, 0.5)",
+    border: "2px solid rgba(17, 17, 17, 0.5)",
     color: "black",
 
     "&:hover": {
-      backgroundColor: "rgba(195, 87, 87, 0.25)",
-      border: "2px solid rgba(124, 3, 3, 0.45)",
+      backgroundColor: "rgba(0, 182, 211, 0.5)",
+      border: "2px solid rgba(17, 17, 17, 0.5)",
     },
     "&:focus": {
       outline: "none",

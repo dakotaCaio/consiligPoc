@@ -87,7 +87,7 @@ export const ChartsDate = () => {
     datasets: [
       {
         data: ticketsData?.data.map((item) => item.total),
-        backgroundColor: '#A70C35',
+        backgroundColor: '#5cb2ce',
       },
     ],
   };
@@ -121,7 +121,7 @@ export const ChartsDate = () => {
           className="buttonHover"
           onClick={handleGetTicketsInformation}
           variant="contained"
-          style={{ background: "linear-gradient(to right, #a70c35, #e73d6a)" }}
+          style={{ background: "linear-gradient(to right, #5cb2ce 0%, #00b6d3 100%)" }}
         >
           Filtrar
         </Button>

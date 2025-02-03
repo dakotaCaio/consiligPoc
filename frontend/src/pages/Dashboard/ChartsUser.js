@@ -100,7 +100,7 @@ export const ChatsUser = () => {
         datasets: [
             {
                 data: ticketsData?.data.length > 0 && ticketsData?.data.map((item) => item.quantidade),
-                backgroundColor: '#A70C35',
+                backgroundColor: '#5cb2ce',
             },
         ],
     };
@@ -130,7 +130,7 @@ export const ChatsUser = () => {
                     />
                 </LocalizationProvider>
 
-                <Button className="buttonHover" onClick={() => {}} variant='contained' style={{background: "linear-gradient(to right, #a70c35, #e73d6a)"}}>Filtrar</Button>
+                <Button className="buttonHover" onClick={() => {}} variant='contained' style={{background: "linear-gradient(to right, #5cb2ce 0%, #00b6d3 100%)"}}>Filtrar</Button>
             </Stack>
 
             <Bar options={options} data={dataCharts} style={{ maxWidth: '100%', maxHeight: '280px', color: "red" }} />

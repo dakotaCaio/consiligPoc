@@ -127,7 +127,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     height: "100%",
     borderRadius: "15px",
-    background: "linear-gradient(to right, #a70c35, #7f0727)",
+    background: "linear-gradient(to right, #5cb2ce 0%, #00b6d3 100%)",
     color: "#fff",
     justifyContent: "center"
   },
@@ -138,7 +138,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     height: "60%",
     borderRadius: "15px",
-    background: "linear-gradient(to right, #a70c35, #7f0727)",
+    background: "linear-gradient(to right, #5cb2ce 0%, #00b6d3 100%)",
     color: "#fff",
     justifyContent: "center"
   },
@@ -149,7 +149,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     height: "100%",
     borderRadius: "15px",
-    background: "linear-gradient(to right, #a70c35, #7f0727)",
+    background: "linear-gradient(to right, #5cb2ce 0%, #00b6d3 100%)",
     color: "#fff",
     justifyContent: "center"
   },
@@ -160,7 +160,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     height: "100%",
     borderRadius: "15px",
-    background: "linear-gradient(to right, #a70c35, #7f0727)",
+    background: "linear-gradient(to right, #5cb2ce 0%, #00b6d3 100%)",
     color: "#fff",
     justifyContent: "center"
   },
@@ -171,7 +171,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     height: "100%",
     borderRadius: "15px",
-    background: "linear-gradient(to right, #a70c35, #7f0727)",
+    background: "linear-gradient(to right, #5cb2ce 0%, #00b6d3 100%)",
     color: "#fff",
     justifyContent: "center"
   },
@@ -182,7 +182,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     height: "100%",
     borderRadius: "15px",
-    background: "linear-gradient(to right, #a70c35, #7f0727)",
+    background: "linear-gradient(to right, #5cb2ce 0%, #00b6d3 100%)",
     color: "#fff",
     justifyContent: "center"
   },
@@ -193,7 +193,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     height: "100%",
     borderRadius: "15px",
-    background: "linear-gradient(to right, #a70c35, #7f0727)",
+    background: "linear-gradient(to right, #5cb2ce 0%, #00b6d3 100%)",
     color: "#fff",
     justifyContent: "center"
   },
@@ -204,7 +204,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     height: "100%",
     borderRadius: "15px",
-    background: "linear-gradient(to right, #a70c35, #7f0727)",
+    background: "linear-gradient(to right, #5cb2ce 0%, #00b6d3 100%)",
     color: "#fff",
     justifyContent: "center"
   },
@@ -215,7 +215,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     height: "100%",
     borderRadius: "15px",
-    background: "linear-gradient(to right, #a70c35, #7f0727)",
+    background: "linear-gradient(to right, #5cb2ce 0%, #00b6d3 100%)",
     color: "#fff",
     justifyContent: "center"
   },
@@ -226,7 +226,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     height: "100%",
     borderRadius: "15px",
-    background: "linear-gradient(to right, #a70c35, #7f0727)",
+    background: "linear-gradient(to right, #5cb2ce 0%, #00b6d3 100%)",
     color: "#fff",
     justifyContent: "center"
   },
@@ -237,7 +237,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     height: "100%",
     borderRadius: "15px",
-    background: "linear-gradient(to right, #a70c35, #7f0727)",
+    background: "linear-gradient(to right, #5cb2ce 0%, #00b6d3 100%)",
     color: "#fff",
     justifyContent: "center"
   },
