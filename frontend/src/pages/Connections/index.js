@@ -531,7 +531,7 @@ const Connections = () => {
                   ))
                 ) : (
                   <TableRow>
-                    <TableCell colSpan={6} align="center">
+                    <TableCell colSpan={7} align="center">
                       {i18n.t("Sem conexões")}
                     </TableCell>
                   </TableRow>
