@@ -20,11 +20,44 @@ import toastError from "../../errors/toastError";
 const useStyles = makeStyles((theme) => ({
   mainPaper: {
     flex: 1,
-    padding: theme.spacing(1),
-    overflowY: "scroll",
-    ...theme.scrollbarStyles,
+    padding: theme.spacing(3),
+    marginTop: theme.spacing(2),
+    backgroundColor: "#f5f5f5",
+    borderRadius: 8,
+    boxShadow: "0 4px 8px rgba(0,0,0,0.1)", 
+  },
+  headerWrapper: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+		marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
+  },
+  titleCard: {
+    padding: theme.spacing(3),
+    backgroundColor: "#fff",
+    borderRadius: 8,
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+    marginBottom: theme.spacing(2), 
+  },
+  buttonCard: {
+    display: "flex",
+    justifyContent: "center",
+    marginTop: theme.spacing(3),
+    padding: theme.spacing(3),
+  },
+  button: {
+    fontWeight: "bold",
+    borderRadius: "6px",
+    padding: "5px 2rem",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+    transition: "background-color 0.3s ease",
+    "&:hover": {
+      backgroundColor: theme.palette.primary.dark,
+    },
   },
 }));
+
 
 const History = () => {
   const classes = useStyles();
@@ -41,85 +74,84 @@ const History = () => {
   const handleCloseHistoryModal = () => {
     setOpenHistoryModal(false);
   };
-  
-  const formatToBrazilTime = (dateString) => {
-		const date = new Date(dateString); 
-		date.setHours(date.getHours()); 
 
-		const formattedDate = date.toLocaleString("pt-BR", {
-		  timeZone: "America/Sao_Paulo",
-		  year: "numeric",
-		  month: "2-digit",
-		  day: "2-digit",
-		  hour: "2-digit",
-		  minute: "2-digit",
-		  second: "2-digit",
-		});
-	  
-		return formattedDate;
-	  };
+  const formatToBrazilTime = (dateString) => {
+    const date = new Date(dateString);
+    date.setHours(date.getHours());
+
+    const formattedDate = date.toLocaleString("pt-BR", {
+      timeZone: "America/Sao_Paulo",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    });
+
+    return formattedDate;
+  };
 
   const handleDownloadPDF = async (number) => {
-		try {
-			console.log("Iniciando download do PDF...");
-			const response = await api.get(`/pdf/${number}`);
-			console.log("Resposta completa:", response);
-			console.log("Dados recebidos:", response.data);
-	
-			const messages = response.data.messages;
+    try {
+      console.log("Iniciando download do PDF...");
+      const response = await api.get(`/pdf/${number}`);
+      console.log("Resposta completa:", response);
+      console.log("Dados recebidos:", response.data);
+
+      const messages = response.data.messages;
       const users = response.data.responseUsers;
-   
-      
-      if(!users[0]){
+
+      if (!users[0]) {
         toastError("Não existe um ticket aberto ou fechado para este Número!");
         return;
       }
-	
-			if (!Array.isArray(messages)) {
-				toastError("Os dados de mensagens não estão no formato esperado.");
-				return;
-			}
-	
-			if (messages.length === 0) {
-				toastError("Nenhuma mensagem encontrada para este número.");
-				return;
-			}
-	
-			const doc = new jsPDF();
-			doc.setFontSize(12);
-			doc.text(`Histórico de Mensagens - Número: ${number} | Atendente: ${users[0].name}`, 10, 10);
-			doc.line(10, 15, 200, 15);
-	
-			let yPosition = 20;
-			const lineHeight = 10;
-			const pageHeight = 280;
-	
-			messages.forEach((message, index) => {
-				const author = message.contact?.name || users[0].name; 
-				const content = message.body || "Sem conteúdo"; 
-				const formattedDate = formatToBrazilTime(message.createdAt); 
-			  
-				const messageText = `${index + 1}. ${author}: ${content} - ${formattedDate}`;
-				console.log(`Processando mensagem ${index + 1}:`, messageText);
-			  
-				const splitText = doc.splitTextToSize(messageText, 180);
-			  
-				splitText.forEach(line => {
-				  if (yPosition + lineHeight > pageHeight) {
-					doc.addPage();
-					yPosition = 10;
-				  }
-				  doc.text(line, 10, yPosition);
-				  yPosition += lineHeight;
-				});
-			});
 
-			doc.save(`Histórico de Mensagens do Número:${number}.pdf`);
-		} catch (err) {
-			console.error("Erro ao gerar o PDF:", err);
-			toastError("Erro ao gerar o PDF. Tente novamente.");
-		}
-	};
+      if (!Array.isArray(messages)) {
+        toastError("Os dados de mensagens não estão no formato esperado.");
+        return;
+      }
+
+      if (messages.length === 0) {
+        toastError("Nenhuma mensagem encontrada para este número.");
+        return;
+      }
+
+      const doc = new jsPDF();
+      doc.setFontSize(12);
+      doc.text(`Histórico de Mensagens - Número: ${number} | Atendente: ${users[0].name}`, 10, 10);
+      doc.line(10, 15, 200, 15);
+
+      let yPosition = 20;
+      const lineHeight = 10;
+      const pageHeight = 280;
+
+      messages.forEach((message, index) => {
+        const author = message.contact?.name || users[0].name;
+        const content = message.body || "Sem conteúdo";
+        const formattedDate = formatToBrazilTime(message.createdAt);
+
+        const messageText = `${index + 1}. ${author}: ${content} - ${formattedDate}`;
+        console.log(`Processando mensagem ${index + 1}:`, messageText);
+
+        const splitText = doc.splitTextToSize(messageText, 180);
+
+        splitText.forEach(line => {
+          if (yPosition + lineHeight > pageHeight) {
+            doc.addPage();
+            yPosition = 10;
+          }
+          doc.text(line, 10, yPosition);
+          yPosition += lineHeight;
+        });
+      });
+
+      doc.save(`Histórico de Mensagens do Número:${number}.pdf`);
+    } catch (err) {
+      console.error("Erro ao gerar o PDF:", err);
+      toastError("Erro ao gerar o PDF. Tente novamente.");
+    }
+  };
 
   const handleSearch = (event) => {
     setSearchParam(event.target.value.toLowerCase());
@@ -127,19 +159,19 @@ const History = () => {
 
   return (
     <MainContainer>
-      <MainHeader>
-        <Title>{i18n.t("mainDrawer.listItems.history")}</Title>
-        <MainHeaderButtonsWrapper>
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={handleOpenHistoryModal}
-            style={{ fontWeight: "bold" }}
-          >
-            {i18n.t("add")}
-          </Button>
-        </MainHeaderButtonsWrapper>
-      </MainHeader>
+      <header>
+        <div className={classes.headerWrapper}>
+          <Title>{i18n.t("mainDrawer.listItems.history")}</Title>
+					<Button
+          variant="contained"
+          color="primary"
+          onClick={handleOpenHistoryModal}
+          className={classes.button}
+        >
+          {i18n.t("Adicionar Histórico")}
+        </Button>
+        </div>
+      </header>
 
       <HistoryModal
         open={openHistoryModal}

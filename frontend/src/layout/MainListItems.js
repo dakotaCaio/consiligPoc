@@ -616,7 +616,7 @@ const MainListItems = (props) => {
                       />
                     )}
 
-                    
+{/*                     
                     {user.super && (
                       <ListItemLink
                         to="/test"
@@ -630,7 +630,7 @@ const MainListItems = (props) => {
                           alignItems: "center"
                         }}
                       />
-                    )}
+                    )} */}
 
                     {user.super && (
                       <ListItemLink

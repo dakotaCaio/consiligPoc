@@ -32,6 +32,36 @@ const useStyles = makeStyles((theme) => ({
 		overflowY: "scroll",
 		...theme.scrollbarStyles,
 	},
+	headerWrapper: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+		marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
+  },
+  titleCard: {
+    padding: theme.spacing(3),
+    backgroundColor: "#fff",
+    borderRadius: 8,
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+    marginBottom: theme.spacing(2), 
+  },
+  buttonCard: {
+    display: "flex",
+    justifyContent: "center",
+    marginTop: theme.spacing(3),
+    padding: theme.spacing(3),
+  },
+  button: {
+    fontWeight: "bold",
+    borderRadius: "6px",
+    padding: "5px 2rem",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+    transition: "background-color 0.3s ease",
+    "&:hover": {
+      backgroundColor: theme.palette.primary.dark,
+    },
+  },
 }));
 
 const CsvReport = () => {
@@ -224,9 +254,9 @@ const CsvReport = () => {
   
 	return (
 		<MainContainer>
-			<MainHeader>
+			<header>
+				<div className={classes.headerWrapper}>
 				<Title>{i18n.t("mainDrawer.listItems.shooting")}</Title>
-				<MainHeaderButtonsWrapper>
 					<Button
 						variant="contained"
 						color="primary"
@@ -235,8 +265,8 @@ const CsvReport = () => {
 					>
 						{i18n.t("Relatório De Disparo")}
 					</Button>
-				</MainHeaderButtonsWrapper>
-			</MainHeader>
+				</div>
+			</header>
 
 			<div>
 				<Dialog open={openPopup} onClose={handleClosePopup}>
